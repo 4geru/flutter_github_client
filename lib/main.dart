@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'data/remote/github_dio.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -59,6 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // called again, and so nothing would appear to happen.
       _counter++;
     });
+    GithubDio().fetch();
   }
 
   @override
